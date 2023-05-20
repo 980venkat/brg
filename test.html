@@ -1,1 +1,25 @@
 
+        $(document).ready(function () {
+ ###### keep this in document ready down 
+            $("#submit_button").prop('disabled', true)
+
+            $(document).on('change','#email,#password',function(){
+                var email = $("#email").val();
+                var passowrd = $("#password").val();
+                alert(email.length )
+                alert(passowrd.length )
+
+                if (email.length > 2 && passowrd.length > 2){
+                    $("#submit_button").prop('disabled', false)
+                }else{
+                    $("#submit_button").prop('disabled', true)
+                }
+            });
+
+
+
+
+
+
+
+=======================================================
